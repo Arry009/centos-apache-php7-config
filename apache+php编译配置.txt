@@ -19,4 +19,4 @@ AddType application/x-httpd-php-source  .phps
   Require all granted
 </Directory>
  </VirtualHost>
-
+centos 为PHP安装扩展http://www.cnblogs.com/luyucheng/p/6230553.html
