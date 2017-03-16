@@ -20,3 +20,6 @@ AddType application/x-httpd-php-source  .phps
 </Directory>
  </VirtualHost>
 centos 为PHP安装扩展http://www.cnblogs.com/luyucheng/p/6230553.html
+
+
+php7.1 设置 session.sid_length //sid的长度，这里要加长，默认的太短了
