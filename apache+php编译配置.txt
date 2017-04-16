@@ -1,4 +1,4 @@
-LoadModule proxy_module modules/mod_proxy.so
+﻿LoadModule proxy_module modules/mod_proxy.so
 LoadModule proxy_fcgi_module modules/mod_proxy_fcgi.so
 
 
@@ -93,3 +93,53 @@ php7 编译安装参数
 --enable-mysqlnd-compression-support \
 --with-pear \
 --enable-opcache
+
+./configure
+--prefix=/usr/local/php7 \                              [PHP7安装的根目录]
+--exec-prefix=/usr/local/php7 \
+--bindir=/usr/local/php7/bin \
+--sbindir=/usr/local/php7/sbin \
+--includedir=/usr/local/php7/include \
+--libdir=/usr/local/php7/lib/php \
+--mandir=/usr/local/php7/php/man \
+--with-config-file-path=/usr/local/php7/etc \           [PHP7的配置目录]
+--with-mysql-sock=/var/run/mysql/mysql.sock \           [PHP7的Unix socket通信文件]
+--with-mcrypt=/usr/include \
+--with-mhash \
+--with-openssl \
+--with-mysql=shared,mysqlnd \                           [PHP7依赖mysql库]              
+--with-mysqli=shared,mysqlnd \                          [PHP7依赖mysql库]
+--with-pdo-mysql=shared,mysqlnd \                       [PHP7依赖mysql库]
+--with-gd \
+--with-iconv \
+--with-zlib \
+--enable-zip \
+--enable-inline-optimization \
+--disable-debug \
+--disable-rpath \
+--enable-shared \
+--enable-xml \
+--enable-bcmath \
+--enable-shmop \
+--enable-sysvsem \
+--enable-mbregex \
+--enable-mbstring \
+--enable-ftp \
+--enable-gd-native-ttf \
+--enable-pcntl \
+--enable-sockets \
+--with-xmlrpc \
+--enable-soap \
+--without-pear \
+--with-gettext \
+--enable-session \                                      [允许php会话session]
+--with-curl \                                           [允许curl扩展]
+--with-jpeg-dir \
+--with-freetype-dir \
+--enable-opcache \                                      [使用opcache缓存]
+--enable-fpm \
+--enable-fastcgi \
+--with-fpm-user=nginx \                                 [php-fpm的用户]
+--with-fpm-group=nginx \                                [php-fpm的用户组]
+--without-gdbm \
+--disable-fileinfo
